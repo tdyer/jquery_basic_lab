@@ -1,0 +1,84 @@
+<html><head>
+<meta charset="utf-8">
+<title>Playlist</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src='src/simple_onload.js'></script>
+</head>
+<body>
+  <div id="pl-1">
+    <p id="pl-name">
+      <h1>Oct 2013</h1>
+    </p>
+    <p id="pl-description">
+      <h3>Songs from Oct 2013</h3>
+    </p>
+  </div>
+  <ul id="song">Songs
+    <li id="jimmy-page" class='artist' rel='zep guitar'>
+      Jimmy Page
+      <button id="jimmy-page-btn" class='btn' > Show Jimmy Page</button>
+    </li>
+    <li id="robert-plant" class='artist' rel='zep vocal'>
+      Robert Plant
+      <button id="robert-plant-btn" class='btn'> Show Robert Plant</button>
+    </li>
+    <li id="John Bohham" class='artist' rel='zep vocal'>
+      John Bohham
+      <button id="John Bohham" class='btn'> Show John Bohham</button>
+    </li>
+    <li id="Dave Gilmour" class='artist' rel='pink vocal'>
+      Dave Gilmour
+      <button id="Dave Gilmour"> Show Dave Gilmour</button>
+    </li>
+    <li id="roger-waters" class='artist' >
+      Roger Waters
+      <button id="roger-waters-btn"> Show Roger Waters</button>
+      <ul>Instruments Played
+        <li class='bass'>Bass</li>
+        <li class='guitar'>Guitar</li>
+        <li class='sitar'>Sitar</li>
+      </ul>
+    </li>
+   
+  </ul>
+  <div id='bands'>
+    <ul> Bands
+      <li>Pink Floyd</li>
+      <li>Led Zeppelin</li>
+     </ul>
+    </div>
+  <button id="add-artist">Show Add Artist Form</button>
+  <form id="add-artist-form" style="display: none;">
+    Name: <input type="text" id="add-artist-name">
+    Description: <input type="textarea" id="add-artist-desc">
+    <input type="submit" value="Create Artist">
+  </form>
+  <ul id="albums"> Albums
+    <li class='album'>
+      Name:Led Zeppelin II<br/>
+      Description:<p>Released in Oct 1969</p><br>
+      Genre:<p>rock</p>
+    </li>
+    <li class='album'>
+      Name:Houses of the Holy<br/>
+      Description:<p>Released in March 1973</p><br/>
+      Genre:<p>rock</p>
+    </li>
+    <li class='album'>
+      Name:Dark Side of the Moon<br/>
+      Description:<p>Released in March 1973</p><br/>
+      Genre:<p>rock</p>
+    </li>
+  </ul>
+  <button id="add-album">Add Album</button>
+  <form id="add-album-form" style="display: none;">
+    Name: <input type="text" id="add-album-name">
+    Description: <input type="textarea" id="add-album-desc">
+    Genre: <input type="text" id="add-album-genre">
+    <input type="submit" value="Create Album">
+  </form>
+  <footer>
+    <div id="record_company_text"></div>
+  </footer>  
+
+</body></html>
