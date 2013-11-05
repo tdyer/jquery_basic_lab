@@ -19,6 +19,9 @@ $(function(){
 	 // select by class attribute, NOTE the dot, .
 	 // $('.album').hide();
 
+	 // select by class attribute, and toggle the display attribute
+	 // $('.album').toggle();
+
  	 // select by id attribute, NOTE the hash symbol, #
 	 // $('#artists').hide();
 
@@ -73,6 +76,15 @@ $(function(){
 
 	 // 	$("#add-artist-form").hide();
 
+   // closest() find closest ancestor
+
+   // data attributes with data-name='tom'
+
+   // filter('...')
+
+   // addClass and removeClass
+
+   // slideDown, slideUp and slideToggle
 	 // });
 
 });
