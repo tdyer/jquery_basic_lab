@@ -51,5 +51,25 @@ $(function(){
  	 // $("#artists li[rel]").hide();
 	 // $("#artists li[rel*='zep']").hide();
 
+	 // Add click handlers
+	 $("#add-artist").on('click', function(event){
+	 	$("#add-artist-form").show();
+	 });
+
+ 	 $("#add-artist-form").on('submit', function(event){
+	 	var $name = $("#add-artist-form input:first"),
+	 	$desc = $("#add-artist-form input:nth-child(2)"),
+	 	artistHTML, name, desc;
+	 	name = $name.val();
+	 	desc = $desc.val();
+
+	 	// construct the new html
+	 	artistHTML = "<li id='" + name + "' class='artist'>" 
+	 	+  name + "<button id='" + name + "-btn'> Show " + name + "</button></li>";
+
+	    // don't let the submit proceed!! It will attempt to reload page.
+	 	event.preventDefault();
+	 	$('#artists').append(artistHTML);
+	 });
 
 });
