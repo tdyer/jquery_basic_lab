@@ -28,20 +28,32 @@
     $(document).ready(function(){
       alert("Hello World");
     });
-    
-### Reference
-    * [Tom's Event Lab Project](https://github.com/tdyer/js_events_lab)
-    * [Teddy's Event Lab Project](https://github.com/tcclevela/js_events)
-    * [Object Oriented Javascript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript)
-    * [This pointers in Event handlers](http://www.robertsosinski.com/2009/04/28/binding-scope-in-javascript/)
+  * Using $ function.
+    jQuery is aliased to $. So jQuery('li').hide() is the same as $('li').hide();
+  * Select all elements using tags. Hide/Show all the li and forms.
+    $('li').hide();
+    $('li').show();
+    $('form').show();
+    $('form').show();
+  * Select elements using the class attribute.
+    Select elements using the class attribute. $('.album').hide();
 
-## Bonus
-Define event handlers on the  RecordLabel, Artist and Album
-classes. See
-[Person class](https://github.com/tdyer/js_events_lab/blob/master/src/person.js)
- markup
-[Person HTML file](https://github.com/tdyer/js_events_lab/blob/master/event_this.html)
-and supporting code [Common Code](https://github.com/tdyer/js_events_lab/blob/master/src/common_done.js)
-to see how one can use JS object methods as event handlers. 
+    $('.album').hide();
+    
+  * Select elements by id
+
+  * Select descendants.
+    $('body li');
+
+  * Select children, direct descendants.
+    $('body > li').hide();
+    $('body > li').show();
+  * Select multiple.
+    $('.album, #add-album').hide();
+  * Pseudo Selector
+    $('.album#first);
+
+### Reference 
+
 
 
