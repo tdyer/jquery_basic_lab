@@ -1,0 +1,75 @@
+/* 
+Author: Chris Castiglione | @castig
+Project: jQuery @GA
+*/
+
+
+body {
+     font-family: Helvetica, Arial, sans-serif;
+     color: black; 
+     line-height: 1.4;
+     padding: 10px;
+     font-size: 100%;
+     background: url('../images/pattern1.png');
+}
+
+h1 {
+  margin: 20px 2px;
+  font-size: 4em;
+  color: #FFFFFF;
+  letter-spacing: -3px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2),-1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin: .2em .2em .3em 0;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer; 
+}
+  h2:hover {
+    color: #000;
+  }
+
+a, a:visited {
+  background: #FF66FF;
+  color: #FFF;
+}
+
+li {
+  margin: 2px;
+  color: #333;
+  cursor: pointer;
+  margin-left: 0px !important;
+}
+
+ol {
+   margin-left: 0px;
+}
+
+hr {
+  margin: 4em 0;
+}
+
+#container {
+  width: 800px;
+  margin: auto;
+}
+  
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+/* Style for Accordion Demo */
+.accordion h2 {
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 1px;
+  }
+ 

@@ -1,0 +1,76 @@
+<html><head>
+<meta charset="utf-8">
+<title>Record Company</title>
+</head>
+<body>
+  <div id="record_company">
+    <p id="rc-name">
+      <h1>Atlantic</h1>
+    </p>
+    <p id="rc-description">
+      <h3>Atlantic Record Label</h3>
+    </p>
+  </div>
+  <ul id="artists">Artists
+    <li id="Jimmy Page">
+      Jimmy Page
+      <button id="Jimmy Page"> Show Jimmy Page</button>
+    </li>
+    <li id="Robert Plant">
+      Robert Plant
+      <button id="Robert Plant"> Show Robert Plant</button>
+    </li>
+    <li id="John Bohham">
+      John Bohham
+      <button id="John Bohham"> Show John Bohham</button>
+    </li>
+    <li id="Dave Gilmour">
+      Dave Gilmour
+      <button id="Dave Gilmour"> Show Dave Gilmour</button>
+    </li>
+    <li id="Roger Waters">
+      Roger Waters
+      <button id="Roger Waters"> Show Roger Waters</button>
+    </li>
+  </ul>
+  <button id="add-artist">Show Add Artist Form</button>
+  <form id="add-artist-form" style="display: none;">
+    Name: <input type="text" id="add-artist-name">
+    Description: <input type="textarea" id="add-artist-desc">
+    <input type="submit" value="Create Artist">
+  </form>
+  <ul id="albums"> Albums
+    <li>
+      Name:Led Zeppelin II<br/>
+      Description:<p>Released in Oct 1969</p><br>
+      Genre:<p>rock</p>
+    </li>
+    <li>
+      Name:Houses of the Holy<br/>
+      Description:<p>Released in March 1973</p><br/>
+      Genre:<p>rock</p>
+    </li>
+    <li>
+      Name:Dark Side of the Moon<br/>
+      Description:<p>Released in March 1973</p><br/>
+      Genre:<p>rock</p>
+    </li>
+  </ul>
+  <button id="add-album">Add Album</button>
+  <form id="add-album-form" style="display: none;">
+    Name: <input type="text" id="add-album-name">
+    Description: <input type="textarea" id="add-album-desc">
+    Genre: <input type="text" id="add-album-genre">
+    <input type="submit" value="Create Album">
+  </form>
+  <footer>
+    <div id="record_company_text"></div>
+  </footer>  
+  <script src="src/common.js"></script>
+  <script src="src/record_company.js"></script>
+  <script src="src/artist.js"></script>
+  <script src="src/album.js"></script>
+  <script src="src/main.js"></script>
+
+
+</body></html>
