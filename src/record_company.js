@@ -10,20 +10,23 @@ RCApp.RecordLabel = function(name, description){
     // this.hideNewArtistForm();
     // this.hideNewAlbumForm();
 
-    document.getElementById('rc-name').innerHTML = "<h1>" + this.name + "</h1>";
-    document.getElementById('rc-description').innerHTML = "<h3>" + this.description + "</h3>";
-    
-    var mylabelname = document.getElementById('rc-description').innerHTML;
+    // document.getElementById('rc-name').innerHTML = "<h1>" + this.name + "</h1>";
+    // document.getElementById('rc-description').innerHTML = "<h3>" + this.description + "</h3>";
 
-    registerEventHandler(document.getElementById('add-artist-form'), 'submit', this.createArtist.bind(this));
-    registerEventHandler(document.getElementById('add-album-form'), 'submit', this.createAlbum.bind(this));
+    $('#rc-name').append("<h1>" + this.name + "</h1>");
+    $('#rc-description').append("<h3>" + this.description + "</h3>");
+
+    var mylabelname = $('#rc-description').innerHTML;
+
+    $('#add-artist-form').on('submit', this.createArtist.bind(this));
+    $('#add-album-form').on('submit', this.createAlbum.bind(this));
 };
 
 // Instance Methods
 RCApp.RecordLabel.prototype.createArtist = function(event){
  // TODO: cache the add artist input fields
- var name = document.getElementById('add-artist-name').value,
- desc = document.getElementById('add-artist-desc').value,
+ var name = $('#add-artist-name').val(),
+ desc = $('#add-artist-desc').val(),
  artist = new RCApp.Artist(name, desc);
  artist.generateHTML();
  this.artists.push(artist);
@@ -33,9 +36,9 @@ RCApp.RecordLabel.prototype.createArtist = function(event){
 };
 
 RCApp.RecordLabel.prototype.createAlbum = function(event){
- var name = document.getElementById('add-album-name').value,
- desc = document.getElementById('add-album-desc').value,
- genre = document.getElementById('add-album-genre').value,
+ var name = $('#add-album-name').val(),
+ desc = $('#add-album-desc').val(),
+ genre = $('#add-album-genre').val(),
  album = new RCApp.Album(name, desc, genre);
  album.generateHTML();
  this.albums.push(album);
@@ -47,24 +50,24 @@ RCApp.RecordLabel.prototype.createAlbum = function(event){
 // Class Methods
 RCApp.RecordLabel.setupHandlers = function(){
   // this.addArtistButtonHandler();
- registerEventHandler(document.getElementById('add-artist'), 'click', this.showArtistForm);
- registerEventHandler(document.getElementById('add-album'), 'click', this.showAlbumForm);
+ $('#add-artist').on('click', this.showArtistForm);
+ $('#add-album').on('click', this.showAlbumForm);
 };
 
 RCApp.RecordLabel.showArtistForm = function(){
-  document.getElementById('add-artist-form').style.display = 'block';
+  $('#add-artist-form').show();
 };
 
 RCApp.RecordLabel.showAlbumForm = function(){
-  document.getElementById('add-album-form').style.display = 'block';
+  $('#add-album-form').show();
 };
 
 RCApp.RecordLabel.hideArtistForm = function(){
-  document.getElementById('add-artist-form').style.display = 'none';
+  $('#add-artist-form').hide();
 };
 
 RCApp.RecordLabel.hideAlbumForm = function(){
-  document.getElementById('add-album-form').style.display = 'none';
+  $('#add-album-form').hide();
 };
 
 
