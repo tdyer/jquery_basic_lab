@@ -59,17 +59,19 @@ $(function(){
  	 $("#add-artist-form").on('submit', function(event){
 	 	var $name = $("#add-artist-form input:first"),
 	 	$desc = $("#add-artist-form input:nth-child(2)"),
-	 	artistHTML, name, desc;
+	 	$artistHTML,buttonHTML, name, desc;
 	 	name = $name.val();
 	 	desc = $desc.val();
 
 	 	// construct the new html
-	 	artistHTML = "<li id='" + name + "' class='artist'>" 
-	 	+  name + "<button id='" + name + "-btn'> Show " + name + "</button></li>";
+	 	buttonHTML = "<button id='" + name + "-btn'> Show " + name + "</button>"
+	 	$artistHTML = $("<li id='" + name + "' class='artist'>" + name + buttonHTML + "</li>");
 
 	    // don't let the submit proceed!! It will attempt to reload page.
 	 	event.preventDefault();
-	 	$('#artists').append(artistHTML);
+	 	$('#artists').append($artistHTML);
+
+	 	$("#add-artist-form").hide();
 	 });
 
 });
