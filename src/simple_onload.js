@@ -52,26 +52,26 @@ $(function(){
 	 // $("#artists li[rel*='zep']").hide();
 
 	 // Add click handlers
-	 $("#add-artist").on('click', function(event){
-	 	$("#add-artist-form").show();
-	 });
+	 // $("#add-artist").on('click', function(event){
+	 // 	$("#add-artist-form").show();
+	 // });
 
- 	 $("#add-artist-form").on('submit', function(event){
-	 	var $name = $("#add-artist-form input:first"),
-	 	$desc = $("#add-artist-form input:nth-child(2)"),
-	 	$artistHTML,buttonHTML, name, desc;
-	 	name = $name.val();
-	 	desc = $desc.val();
+ 	//  $("#add-artist-form").on('submit', function(event){
+	 // 	var $name = $("#add-artist-form input:first"),
+	 // 	$desc = $("#add-artist-form input:nth-child(2)"),
+	 // 	$artistHTML,buttonHTML, name, desc;
+	 // 	name = $name.val();
+	 // 	desc = $desc.val();
 
-	 	// construct the new html
-	 	buttonHTML = "<button id='" + name + "-btn'> Show " + name + "</button>"
-	 	$artistHTML = $("<li id='" + name + "' class='artist'>" + name + buttonHTML + "</li>");
+	 // 	// construct the new html
+	 // 	buttonHTML = "<button id='" + name + "-btn'> Show " + name + "</button>"
+	 // 	$artistHTML = $("<li id='" + name + "' class='artist'>" + name + buttonHTML + "</li>");
 
-	    // don't let the submit proceed!! It will attempt to reload page.
-	 	event.preventDefault();
-	 	$('#artists').append($artistHTML);
+	 //    // don't let the submit proceed!! It will attempt to reload page.
+	 // 	event.preventDefault();
+	 // 	$('#artists').append($artistHTML);
 
-	 	$("#add-artist-form").hide();
-	 });
+	 // 	$("#add-artist-form").hide();
+	 // });
 
 });
