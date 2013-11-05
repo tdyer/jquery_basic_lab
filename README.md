@@ -18,7 +18,17 @@
    * [JQuery](http://jquery.com/)
 
 ### Step One
+  * Document (DOM) is ready.
     * Open up the index.html file so we can use jQuery page load.
+      * Add the remote reference to the jquery library, served by google's CDN.
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+      * Add simple on load script.
+        <script src='src/simple_onload.js'></script>
+    $(document).ready(function(){
+      alert("Hello World");
+    });
+    
 ### Reference
     * [Tom's Event Lab Project](https://github.com/tdyer/js_events_lab)
     * [Teddy's Event Lab Project](https://github.com/tcclevela/js_events)
