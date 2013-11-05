@@ -5,13 +5,6 @@ RCApp.RecordLabel = function(name, description){
     this.description = description;
     this.artists = [];
     this.albums = [];
-    // this.artistsEl = document.getElementById('artists');
-    // this.albumsEl = document.getElementById('albums');
-    // this.hideNewArtistForm();
-    // this.hideNewAlbumForm();
-
-    // document.getElementById('rc-name').innerHTML = "<h1>" + this.name + "</h1>";
-    // document.getElementById('rc-description').innerHTML = "<h3>" + this.description + "</h3>";
 
     $('#rc-name').append("<h1>" + this.name + "</h1>");
     $('#rc-description').append("<h3>" + this.description + "</h3>");
@@ -49,7 +42,6 @@ RCApp.RecordLabel.prototype.createAlbum = function(event){
 
 // Class Methods
 RCApp.RecordLabel.setupHandlers = function(){
-  // this.addArtistButtonHandler();
  $('#add-artist').on('click', this.showArtistForm);
  $('#add-album').on('click', this.showAlbumForm);
 };

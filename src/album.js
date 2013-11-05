@@ -7,8 +7,8 @@ RCApp.Album = function(name, description, genre){
 };
 
 RCApp.Album.prototype.generateHTML = function(){
-   var albums_list = document.getElementById('albums'),
+   var $albums_list = $('#albums'),
    html = "<li>Name:" + this.name + "<br/>Description:<p>" + this.description + "</p><br/>Genre:<p>" + this.genre +"</p></li>";
 
-   albums_list.innerHTML += html;
+   $albums_list.append(html);
 };
